@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paroles</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap">
+    <style>
+        .lyrics {
+            font-size: 1.5em;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+            white-space: pre-wrap; /* Conserve les sauts de ligne dans le texte */
+        }
+    </style>
+</head>
+<body>
+    <audio id="background-music" src="musique.mp3" autoplay loop></audio>
+    <header>
+        <h1>Paroles de la Chanson</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="paroles.html">Paroles</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="lyrics">
+        <div class="lyrics" id="lyrics-container">
+            <!-- Les paroles défileront ici -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mon Site Web</p>
+    </footer>
+
+    <script>
+        const lyrics = `
+            Voici les premières paroles de la chanson.
+            Elles vont défiler en rythme avec la musique.
+            Ajoute ici les paroles que tu veux faire défiler.
+            Continue avec le reste des paroles...
+        `;
+
+        const lyricsContainer = document.getElementById('lyrics-container');
+        let currentLine = 0;
+        const lines = lyrics.split('\n');
+        const interval = 1000; // Intervalle en millisecondes (ajuste selon le rythme de la musique)
+
+        function scrollLyrics() {
+            if (currentLine < lines.length) {
+                lyricsContainer.innerHTML += lines[currentLine] + '<br>';
+                currentLine++;
+                lyricsContainer.scrollTop = lyricsContainer.scrollHeight;
+            }
+        }
+
+        setInterval(scrollLyrics, interval);
+    </script>
+</body>
+</html>
