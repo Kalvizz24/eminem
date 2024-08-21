@@ -85,7 +85,7 @@
     </style>
 </head>
 <body>
-    <audio id="background-music" src="musique.mp3" autoplay loop></audio>
+    <audio id="background-music" src="jtmclara.wav" autoplay loop></audio>
     <header>
         <h1>Paroles Synchronisées</h1>
         <nav>
@@ -133,18 +133,24 @@
         const lyricsContainer = document.getElementById('lyrics-container');
         const audio = document.getElementById('background-music');
 
+        // Crée les éléments de paroles une seule fois
+        lyrics.forEach(line => {
+            const lyricDiv = document.createElement('div');
+            lyricDiv.className = 'lyrics';
+            lyricDiv.textContent = line.text;
+            lyricsContainer.appendChild(lyricDiv);
+        });
+
         function updateLyrics() {
             const currentTime = audio.currentTime;
-            lyrics.forEach((line, index) => {
-                const lyricDiv = document.createElement('div');
-                lyricDiv.className = 'lyrics';
-                lyricDiv.textContent = line.text;
-                if (currentTime >= line.time && (index === lyrics.length - 1 || currentTime < lyrics[index + 1].time)) {
-                    lyricDiv.classList.add('visible');
+            const lyricDivs = document.querySelectorAll('.lyrics');
+
+            lyricDivs.forEach((div, index) => {
+                if (currentTime >= lyrics[index].time && (index === lyrics.length - 1 || currentTime < lyrics[index + 1].time)) {
+                    div.classList.add('visible');
                 } else {
-                    lyricDiv.classList.remove('visible');
+                    div.classList.remove('visible');
                 }
-                lyricsContainer.appendChild(lyricDiv);
             });
         }
 
