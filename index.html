@@ -3,9 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oasis de Inspiration </title>
+    <title>Oasis de Inspiration</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Lora', serif;
+            color: #fff;
+            background: #282c34;
+            display: flex;
+            flex-direction: column;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+        section#home {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+            flex: 1; /* Permet au contenu de prendre l'espace disponible */
+        }
+        blockquote {
+            font-size: 1.2em;
+            line-height: 1.5em;
+            margin: 20px 0;
+            padding: 10px;
+            border-left: 4px solid #ffcc00;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 5px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: auto; /* Pousse le footer en bas */
+        }
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
 </head>
 <body>
     <audio id="background-music" src="jtmclara.mp3" autoplay loop></audio>
@@ -18,53 +87,52 @@
         </nav>
     </header>
 
-<section id="home">
-    <h2>Citations Inspirantes</h2>
-    <blockquote>
-        <p>"La vie est un défi, relève-le !" - Mère Teresa</p>
-    </blockquote>
-    <blockquote>
-        <p>"Le seul endroit où le succès vient avant le travail, c'est dans le dictionnaire." - Vidal Sassoon</p>
-    </blockquote>
-    <blockquote>
-        <p>"Le meilleur moyen de prédire l'avenir est de l'inventer." – Alan Kay</p>
-    </blockquote>
-    <blockquote>
-        <p>"La vie n’est pas d’attendre que l’orage passe, mais d’apprendre à danser sous la pluie." – Sénèque</p>
-    </blockquote>
-    <blockquote>
-        <p>"Ne rêve pas ta vie, vis tes rêves." – Anonyme</p>
-    </blockquote>
-    <blockquote>
-        <p>"Les grandes choses ne sont jamais faites par une seule personne, elles sont faites par une équipe de personnes." – Steve Jobs</p>
-    </blockquote>
-    <blockquote>
-        <p>"Il ne faut pas attendre d’être parfait pour commencer quelque chose de bien." – Abbé Pierre</p>
-    </blockquote>
-    <blockquote>
-        <p>"La seule limite à notre réalisation de demain est nos doutes et hésitations d’aujourd’hui." – Franklin D. Roosevelt</p>
-    </blockquote>
-    <blockquote>
-        <p>"Ce n’est pas la montagne que nous conquérons, mais nous-mêmes." – Sir Edmund Hillary</p>
-    </blockquote>
-    <blockquote>
-        <p>"La vie est 10% ce qui nous arrive et 90% comment nous y réagissons." – Charles R. Swindoll</p>
-    </blockquote>
-    <blockquote>
-        <p>"L’avenir appartient à ceux qui croient à la beauté de leurs rêves." – Eleanor Roosevelt</p>
-    </blockquote>
-    <blockquote>
-        <p>"Le plus grand danger pour la plupart d’entre nous n’est pas que notre objectif soit trop haut et que nous échouions, mais qu’il soit trop bas et que nous réussissions." – Michel-Ange</p>
-    </blockquote>
-</section>
-
+    <section id="home">
+        <h2>Citations Inspirantes</h2>
+        <blockquote>
+            <p>"La vie est un défi, relève-le !" - Mère Teresa</p>
+        </blockquote>
+        <blockquote>
+            <p>"Le seul endroit où le succès vient avant le travail, c'est dans le dictionnaire." - Vidal Sassoon</p>
+        </blockquote>
+        <blockquote>
+            <p>"Le meilleur moyen de prédire l'avenir est de l'inventer." – Alan Kay</p>
+        </blockquote>
+        <blockquote>
+            <p>"La vie n’est pas d’attendre que l’orage passe, mais d’apprendre à danser sous la pluie." – Sénèque</p>
+        </blockquote>
+        <blockquote>
+            <p>"Ne rêve pas ta vie, vis tes rêves." – Anonyme</p>
+        </blockquote>
+        <blockquote>
+            <p>"Les grandes choses ne sont jamais faites par une seule personne, elles sont faites par une équipe de personnes." – Steve Jobs</p>
+        </blockquote>
+        <blockquote>
+            <p>"Il ne faut pas attendre d’être parfait pour commencer quelque chose de bien." – Abbé Pierre</p>
+        </blockquote>
+        <blockquote>
+            <p>"La seule limite à notre réalisation de demain est nos doutes et hésitations d’aujourd’hui." – Franklin D. Roosevelt</p>
+        </blockquote>
+        <blockquote>
+            <p>"Ce n’est pas la montagne que nous conquérons, mais nous-mêmes." – Sir Edmund Hillary</p>
+        </blockquote>
+        <blockquote>
+            <p>"La vie est 10% ce qui nous arrive et 90% comment nous y réagissons." – Charles R. Swindoll</p>
+        </blockquote>
+        <blockquote>
+            <p>"L’avenir appartient à ceux qui croient à la beauté de leurs rêves." – Eleanor Roosevelt</p>
+        </blockquote>
+        <blockquote>
+            <p>"Le plus grand danger pour la plupart d’entre nous n’est pas que notre objectif soit trop haut et que nous échouions, mais qu’il soit trop bas et que nous réussissions." – Michel-Ange</p>
+        </blockquote>
+    </section>
 
     <footer>
         <p>&copy; 2024 Mon Site Web</p>
     </footer>
 
     <!-- Particles.js -->
-    <div id="particles-js" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: -1;"></div>
+    <div id="particles-js"></div>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
         particlesJS('particles-js', {
